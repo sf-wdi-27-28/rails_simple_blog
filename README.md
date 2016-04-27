@@ -293,6 +293,8 @@ It's a little duplicative but its also a little more RESTful and we can basicall
 
 > `as: 'new_post'` assigns a name to this route.  Rails gives us methods like `new_post_url` based on these names that we can use later to refer to the URL.  It's common to use `new_RESOURCE` as the name here.
 > <details><summary>Why didn't we specify an `as: 'posts'` for the others?</summary>  If you run rake routes you can see that Rails automagically assigned the correct name `posts`. </details>
+> 
+> <details><summary>Couldn't I use `get 'posts' => 'posts#index'`?</summary> Yes, Rails often has more than one syntax for many of it's methods.  </details>
 
 ## Add the controller methods
 
