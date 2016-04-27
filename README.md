@@ -6,6 +6,8 @@ We're going to use rails to create a simple blog app.  As you go through these i
 * Be mindful of spelling.
 * Commit your changes as you go.
 
+**Do not copy and paste the commands.**  It is ok to copy and paste the html.erb code only.  Typing the rest in will help you to remember it and think about what it does.
+
 #### Submission instructions
 
 You'll be creating your rails app in another directory - **NOT** inside this repo.  
