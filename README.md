@@ -321,7 +321,7 @@ In `app/controllers/posts_controller.rb` add the following method:
 
 Create a new file for the view `app/views/posts/new.html.erb`.
 
-Add the following:
+Add the following <sub>(this time it's ok to copy-paste)</sub>:
 
 ```erb
 <h1>Write a new blog post</h1>
