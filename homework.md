@@ -1,5 +1,7 @@
 # homework submission
 
+**You will submit this file, edited, as your homework**
+
 * As you build your app, keep `homework.md` open.  
 * Each time you run a new `rake ...` or `rails ...` command, jot it down in homework.md.  
 * Describe what each command does.  If it has arguments, what do they mean?
