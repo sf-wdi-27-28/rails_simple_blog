@@ -1,4 +1,4 @@
-# Blog - Read
+# Getting Started
 
 We're going to use rails to create a simple blog app.  As you go through these instructions:
 
@@ -17,6 +17,7 @@ You'll be creating your rails app in another directory - **NOT** inside this rep
 
 Note: Rails has a very large spell-book; it comes with a **lot** of built-in commands and helpers which can be tough to remember.  **You may want to write these down in your notes as well.**
 
+# Blog - Read
 
 
 ## Create a rails app called 'blog'
