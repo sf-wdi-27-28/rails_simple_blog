@@ -12,14 +12,14 @@
 ## Rails commands
 
 * `rails new blog -d postgresql` - tells rails to create a new app called 'blog'
-  * `-d postgresql` tells rails that it should configure the app to use a Postgres database instead of the default.
-
-* `rails ...` - _YOUR DESCRIPTION_
-* `rails ...` - _YOUR DESCRIPTION_
+  * `-d postgresql` - tells rails that it should configure the app to use a Postgres database instead of the default.
+* `rails s` - starts the server
+* `rails generate controller` creates new controller file
 
 
 
 ## Rake commands
 
-* `rake ...` - _YOUR DESCRIPTION_
-* `rake ...` - _YOUR DESCRIPTION_
+* `rake db:create` - tells Rails to create the database our app will use. Otherwise we'll get an error: ActiveRecord::NoDatabaseError
+* `rake routes` - shows where rails is mapping routes
+* `rake db:migrate` - migrates database
