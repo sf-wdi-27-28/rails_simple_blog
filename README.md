@@ -396,8 +396,10 @@ Commit your changes!
 Rails comes with a **lot** of built-in commands and helpers which can be hard to remember.  **You may want to write these down in your notes as well.**
 
 
-#### Stretch
+#### Stretch (optional)
 
 1. On your own, edit the index view adding a link `<%= link_to _________ %>` to link to the new page.  Try using `rake routes`.
 
 1. Figure out how to delete a post.  (You'll need a `PostsController#destroy`) and a link like `<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>`
+
+1. Open up the layout for your app in `app/views/layouts/application.html.erb`, add bootstrap and customize to your <3's content.
