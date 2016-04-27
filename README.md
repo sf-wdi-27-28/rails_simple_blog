@@ -26,6 +26,8 @@ First go to your wdi development directory, then:
 ```sh
 rails new blog -d postgresql
 ```
+This might take a minute...
+
 > `rails new example` tells rails to create an app called "example"
 
 > `-d postgresql` tells rails we want to use Postgres instead of sqlite.
@@ -61,6 +63,23 @@ rails generate controller posts index
 
 <details>
 <summary>Rails will generate a whole bunch of files here.</summary>
+```sh
+     create  app/controllers/posts_controller.rb
+       route  get 'posts/index'
+      invoke  erb
+      create    app/views/posts
+      create    app/views/posts/index.html.erb
+      invoke  test_unit
+      create    test/controllers/posts_controller_test.rb
+      invoke  helper
+      create    app/helpers/posts_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/posts.coffee
+      invoke    scss
+      create      app/assets/stylesheets/posts.scss
+```
 </details>
 
 In particular you'll notice that it created:
