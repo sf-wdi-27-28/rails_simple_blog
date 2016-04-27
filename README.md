@@ -135,7 +135,9 @@ rake db:migrate
 > Feel free to look at your migration first before migrating.  Check `db/migrate/*`  
 > In the future you may even need to edit it before you migrate and commit.
 
-> At this point you can use your model from the rails console `rails c`.  `Post.create('title: first post', body: 'yay!')`
+> At this point you can use your model from the rails console 
+> `$ rails c`.  
+> `Post.create('title: first post', body: 'yay!')`
 
 
 #### Commit your changes
@@ -193,11 +195,12 @@ Edit the index method to look like:
   end
 ```
 
-Now if you visit `localhost:3000` again and then look in the terminal where `rails server` is running, you should be able to find the text: 
+Now if you visit `localhost:3000` again and then look in the **terminal** where `rails server` is running, you should be able to find the text: 
 `PostsController#index found 2 posts!`.  
 > You might have to scroll up a bit; look for `Post Load (0.2ms)  SELECT "posts".* FROM "posts"` in **BOLD**.
  
 Rails is calling the code in PostsController#index whenever someone requests the root route!  
+Sadly, your page doesn't display anything new; we'll fix that next!
 
 #### Edit the view
 
@@ -237,6 +240,9 @@ Take a look at the work you did in this section.  See if you can see how things 
 > </details>
 
 
+You have a working app now!  Congratulations!
+
+
 # Blog - Create
 
 We currently have one route in our app that serves all of our blog posts.  _Buuuuut_ we don't have any way to write blog posts without editing our seed file.
@@ -267,7 +273,7 @@ It's a little duplicative but its also a little more RESTful and we can basicall
 
 ## Add routes
 
-1. Open up `config/routes.rb.
+1. Open up `config/routes.rb`.
 1. Add the following routes:
 	```rb
 	  # /posts/new
@@ -287,10 +293,9 @@ It's a little duplicative but its also a little more RESTful and we can basicall
 
 ## Add the controller methods
 
-If you were to try to visit `GET /posts/new` or `POST /posts` right now you'd see an error.  That's because we're missing the methods needed to handle these routes in our controller.   
+If you were to try to visit `GET /posts/new` or `POST /posts` right now you'd see an error.  That's because we're missing the views for these routes.  
 
-
-Let's go into our `app/controllers/posts_controller.rb` and add the two new methods we need.  
+You're also missing the methods in the controller, let's deal with that now.  Let's go into our `app/controllers/posts_controller.rb` and add the two new methods we need.  
 
 <details><summary>Wait, you mean 3 new methods, right?</summary>
 Nope, we mapped both the `GET /` and `GET /posts` routes to the same controller method: `posts#index`.
@@ -339,11 +344,17 @@ Add the following:
 
 You should now be able to visit [http://localhost:3000/posts/new](http://localhost:3000/posts/new).  Submitting the form though will result in an error.
 
-* What method gets called when you submit the form?  (
+* What method (in the controller) gets called when you submit the form?
+
+<details><summary>`form_for` ?</summary>
+Rails uses form_for to generate a form for a model instance.  It has some knowledge about the model used and will take care of setting the 'name' and 'id' attributes in the html.  If the instance of the model has some data in it, it can pre-populate the fields.  Rails will also add a few hidden fields that it uses for security which you can see if you inspect it in the browser.
+</details>
 
 #### `PostsController#create`
 
-Let's handle the submitted form.  We know that it POSTs to `/posts` and that `POST /posts` is handled by `PostsController#create`.  We configured that in our router.  (Run `rake routes` if you're uncertain.)
+Let's handle the submitted form.  We know that the form will POST to `/posts` and that `POST /posts` is handled by `PostsController#create`;  we configured that in our router.  (Run `rake routes` if you're uncertain.)
+
+We need to take the data from the form (it'll be in `params` similar to express) and then save it into the database.  Then we'll just redirect our user to the index page so they can view their post.
 
 Open the controller up again and let's add the create method.
 
