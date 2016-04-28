@@ -11,16 +11,21 @@
 
 ## Rails commands
 
-* `rails new blog -d postgresql` - tells rails to create a new app called 'blog'
-  * `-d postgresql` tells rails that it should configure the app to use a Postgres database instead of the default.
+* `rails new blog -d postgresql`: tells rails to create a new app called 'blog'
+* `-d postgresql` tells rails that it should configure the app to use a Postgres database instead of the default.
 
-* `rails ...` - _YOUR DESCRIPTION_
-* `rails ...` - _YOUR DESCRIPTION_
+* `rails s`: starts the localhost server
+* `rails generate controller posts index`:invokes & creates new controllers & .html files
+* `rails generate model post title:string body:text`: store blog posts with Title & body
+* `rails c`: use model from terminal //Post.create(title: 'first post', body: 'Hello!')
+
 
 
 
 
 ## Rake commands
 
-* `rake ...` - _YOUR DESCRIPTION_
-* `rake ...` - _YOUR DESCRIPTION_
+* `rake db:create`: tells Rails to create the database our app will use. Otherwise we'll get an error: ActiveRecord::NoDatabaseError
+* `rake routes`: rails is now mapping /posts/index to the PostsController's #index method. It uses the verb GET.
+* `rake db:migrate`: migrates database after creating a new model
+* `rake db:seed`: run seed file
