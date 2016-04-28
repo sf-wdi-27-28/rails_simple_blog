@@ -14,13 +14,16 @@
 * `rails new blog -d postgresql` - tells rails to create a new app called 'blog'
   * `-d postgresql` tells rails that it should configure the app to use a Postgres database instead of the default.
 
-* `rails ...` - _YOUR DESCRIPTION_
-* `rails ...` - _YOUR DESCRIPTION_
+'rails generate controller posts index' - creates a bunch of files app/controller & app/views & app/assets
+
+'rails generate model post title:string body:text' - created two attributes for blog..title & body
+
+'rails c' - creates a console on your terminal
 
 
 
 
 ## Rake commands
-
-* `rake ...` - _YOUR DESCRIPTION_
-* `rake ...` - _YOUR DESCRIPTION_
+'rake db:create' - tells rails to create a new db for 'blog-app'
+'rake routes' - displays all config routes
+'rake db:seed' - the command informed me that I have 1 pending migration:   20160427233315 CreatePosts
