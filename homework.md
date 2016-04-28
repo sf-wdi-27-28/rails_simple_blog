@@ -13,14 +13,21 @@
 
 * `rails new blog -d postgresql` - tells rails to create a new app called 'blog'
   * `-d postgresql` tells rails that it should configure the app to use a Postgres database instead of the default.
-
-* `rails ...` - _YOUR DESCRIPTION_
-* `rails ...` - _YOUR DESCRIPTION_
-
-
-
-
+* rails generate controller posts index
+generates controller Posts and view posts
+* rails generate model post title:string body:text
+generates model "post" with title and body
 ## Rake commands
-
-* `rake ...` - _YOUR DESCRIPTION_
-* `rake ...` - _YOUR DESCRIPTION_
+* rake db:create
+creates a new database
+* rake routes
+lists the routes specified in routes.rb
+* rake db:migrate
+migrates the db
+* rake db:seed
+seeds the database
+* rake routes
+lists the routes specified in routes.rb
+* rake routes
+lists the routes specified in routes.rb
+get posts#new, posts#create, posts
