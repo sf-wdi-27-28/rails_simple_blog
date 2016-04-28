@@ -16,7 +16,13 @@
 
 * `rails ...` - _YOUR DESCRIPTION_
 * `rails ...` - _YOUR DESCRIPTION_
-
+* rails new blog -d postgresql -"creates a new rails file 'blog' and tells
+    rails to use postgres"
+* rails s -"turns server on"
+* rails generate controller posts index -"creates starter files/code for
+    posts"  
+* rails generate model post title:string body:text -"creates model folder
+    with starter post file"
 
 
 
@@ -24,3 +30,7 @@
 
 * `rake ...` - _YOUR DESCRIPTION_
 * `rake ...` - _YOUR DESCRIPTION_
+* rake db:create -"creates the data base the app will use"
+* rake routes -"shows all the routes"
+* rake db:migrate -"it updates the db with the new table/files/models"
+* rake db:seed -"seeding the seed file into the db"
