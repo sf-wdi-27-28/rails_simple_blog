@@ -17,6 +17,9 @@
 * `rails ...` - _YOUR DESCRIPTION_
 * `rails ...` - _YOUR DESCRIPTION_
 
+###############
+* `rails generate model post title:string body:text` - created the model (format) of blog posts
+###############
 
 
 
@@ -24,3 +27,8 @@
 
 * `rake ...` - _YOUR DESCRIPTION_
 * `rake ...` - _YOUR DESCRIPTION_
+
+###############
+* `rake routes` - maps the index to PostsController
+* `rake db:migrate` - migrates everything to the same part in the db so that everything is in the same commit
+###############
