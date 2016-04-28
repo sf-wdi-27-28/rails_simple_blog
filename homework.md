@@ -15,9 +15,9 @@
   * `-d postgresql` tells rails that it should configure the app to use a Postgres database instead of the default.
 
 * rails new blog -d postgresql - Creates our rails directory
-* rails c - rails commands
+* rails c - rails terminal (?)
 
-*
+
 
 
 
@@ -28,4 +28,4 @@
 * `rake routes - shows routes with verbs
 * `rake db:migrate - making sure db is configured to our needs? We just changed model, we configure our db this way to match our needs
 
-*rake db:seed - filled our db with seed data
+* `rake db:seed - filled our db with seed data
